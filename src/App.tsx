@@ -5,7 +5,7 @@ import defaultDataset from './dataset'
 interface Props {}
 
 interface State {
-  answers: any[],
+  answers: Answers,
   chats: any[],
   currentId: string,
   dataset: Dataset,
