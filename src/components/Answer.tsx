@@ -25,7 +25,6 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const Answer: React.FC<Props> = (props) => {
   const classes = useStyles()
-  console.log(classes)
   return (
     <Button
       className={classes.button}
