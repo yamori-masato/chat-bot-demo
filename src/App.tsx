@@ -41,9 +41,15 @@ export default class App extends React.Component<Props, State> {
   } 
 
   selectAnswer = (selectedAnswer: string, nextQuestionId: string) => {
-    switch (nextQuestionId) {
-      case 'init':
+    switch (true) {
+      case (nextQuestionId === 'init'):
         setTimeout(() => this.displayNextQuestion(nextQuestionId), 500)
+        break
+      case (/^https:*/.test(nextQuestionId)):
+        const a = document.createElement('a')
+        a.href = nextQuestionId
+        a.target = '_blank'
+        a.click()
         break
       default:
         const chats = this.state.chats
